@@ -16,18 +16,18 @@ struct TextFieldViewModifiers: ViewModifier {
     
     func body(content: Content) -> some View {
         content
+            .frame(height: height)
             .background(backgroundColor)
             .foregroundColor(foregroundColor)
-            .frame(height: height)
             .cornerRadius(cornerRadius)
-            .padding()
+        
     }
 }
 
 extension View {
     
-    func kotteTextField() -> some View {
-        return self.modifier(TextFieldViewModifiers(backgroundColor: Color.gray, foregroundColor: .blue, cornerRadius: 8.0, height: 50.0))
+    func kotteTextField(height: CGFloat = 50) -> some View {
+        return self.modifier(TextFieldViewModifiers(backgroundColor: Color.gray, foregroundColor: .blue, cornerRadius: 4.0, height: height))
     }
 }
 
@@ -40,11 +40,14 @@ public struct KotteTextFields: View {
     public init () {}
     
     public var body: some View {
-        VStack(spacing:23) {
+        VStack(spacing:10) {
             TextField("Enter User Name", text: $userName)
                 .kotteTextField()
+                .frame(height:60)
+                
             SecureField("Enter Password", text: $password)
                 .kotteTextField()
+                .frame(height:50)
             Button("Login") {
                 
             }
@@ -52,9 +55,9 @@ public struct KotteTextFields: View {
             .frame(height: 46)
             .background(Color.blue)
             .foregroundColor(.white)
-            .cornerRadius(8.0)
-            .padding()
+            .cornerRadius(4.0)
         }
+        .padding()
     }
 }
 
