@@ -54,7 +54,6 @@ public struct KotteTextFields: View {
             .foregroundColor(.white)
             .cornerRadius(8.0)
             .padding()
-            
         }
     }
 }
