@@ -58,7 +58,7 @@ public struct KotteTextFields: View {
             .padding()
             
         }
-    }
+    }  
 }
 
 '''
