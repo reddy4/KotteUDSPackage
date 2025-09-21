@@ -10,7 +10,7 @@ import SwiftUI
 struct TextFieldViewModifiers: ViewModifier {
     
     let backgroundColor: Color
-    let foregroundColor: Color
+   // let foregroundColor: Color
     let cornerRadius: CGFloat
     let height: CGFloat
     
@@ -26,7 +26,7 @@ struct TextFieldViewModifiers: ViewModifier {
 extension View {
     
     func kotteTextField() -> some View {
-        return self.modifier(TextFieldViewModifiers(backgroundColor: .gray, foregroundColor: .white, cornerRadius: 4.0, height: 45))
+        return self.modifier(TextFieldViewModifiers(backgroundColor: .gray, cornerRadius: 4.0, height: 45))
     }
 }
 
