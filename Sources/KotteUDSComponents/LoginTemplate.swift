@@ -34,7 +34,6 @@ public struct LoginTemplate: View {
     
     @State var userName: String = ""
     @State var password: String = ""
-    
     public init () {}
     
     public var body: some View {
