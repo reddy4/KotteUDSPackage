@@ -30,7 +30,7 @@ extension View {
     }
 }
 
-public struct KotteTextFields: View {
+public struct LoginTemplate: View {
     
     @State var userName: String = ""
     @State var password: String = ""
@@ -60,5 +60,5 @@ public struct KotteTextFields: View {
 }
 
 #Preview {
-    KotteTextFields()
+    LoginTemplate()
 }
